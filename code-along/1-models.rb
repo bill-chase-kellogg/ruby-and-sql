@@ -11,6 +11,8 @@ Company.destroy_all
 # 1a. check out the schema file
 # 1b. check out the model file
 
+puts "There are #{Company.all.count} companies"
+
 # 2. create new companies
 
 # 3. query companies table
