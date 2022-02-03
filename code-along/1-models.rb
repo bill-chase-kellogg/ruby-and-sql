@@ -15,6 +15,16 @@ puts "There are #{Company.all.count} companies"
 
 # 2. create new companies
 
+values = {
+            name: "Apple", 
+            url: "apple.com", 
+            city: "cupertino", 
+            state: "CA"
+        }
+
+        company = Company.new(values)
+        company.save
+
 # 3. query companies table
 
 # 4. read column values from row
