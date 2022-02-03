@@ -17,8 +17,8 @@ puts "There are #{Company.all.count} companies"
 
 values = {
             name: "Apple", 
-            url: "apple.com", 
-            city: "cupertino", 
+            url: "Apple.com", 
+            city: "Cupertino", 
             state: "CA"
         }
 
@@ -49,8 +49,23 @@ puts "There are #{Company.all.count} companies"
 
 # 3. query companies table
 
+# puts Company.all.inspect
 
+# puts Company.where({state: "CA", name: "Apple"}).count
+apple = Company.where({state: "CA", name: "Apple"})[0]
+# puts apple.inspect
+
+#cat log/development.log -- to read the log files
 
 # 4. read column values from row
 
+puts "#{apple.read_attribute (:name)} has a website: #{apple.read_attribute(:url)}"
+puts "#{apple.name} has a website: #{apple.url}"
+
 # 5. update attribute value
+
+puts apple.inspect
+
+apple.write_attribute(:slogan, "Think Different.")
+
+puts apple.inspect
