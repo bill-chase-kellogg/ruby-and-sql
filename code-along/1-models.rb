@@ -67,5 +67,11 @@ puts "#{apple.name} has a website: #{apple.url}"
 puts apple.inspect
 
 apple.write_attribute(:slogan, "Think Different.")
+apple.save
 
 puts apple.inspect
+
+tesler = Company.new({name: "Tesler"})
+tesler.save
+
+tesler.destroy
