@@ -6,8 +6,8 @@
 # 1. Query all of the contacts at Apple Inc.
 
 apple = Company.where({name: "Apple"})[0]
-# amazon = Company.where({name: "Amazon"})[0]
-# tesla = Company.where({name: "Tesla"})[0]
+amazon = Company.where({name: "Amazon"})[0]
+tesla = Company.where({name: "Tesla"})[0]
 
 # contacts = Contact.where({company_id: apple.id})
 # puts contacts.inspect

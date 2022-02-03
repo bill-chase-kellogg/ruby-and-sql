@@ -5,6 +5,17 @@
 
 # 1. write code to display each contact (you can reuse the previous lab's code) and include the contact's company name, e.g.:
 
+apple = Company.where({name: "Apple"})[0]
+puts "Contacts: #{Contact.all.count}"
+
+# contacts = Contact.all
+
+# for contact in contacts
+#    puts "#{contact.first_name} #{contact.last_name} - #{contact.email} - #{contact.company.name}"
+# end
+
+
+
 # ---------------------------------
 # Contacts: 4
 # Andy Jassy - andy@amazon.com - Amazon.com, Inc.
@@ -16,6 +27,7 @@
 
 # ---------------------------------
 # Apple Inc.
+
 # Tim Cook - tim@apple.com
 # Craig Federighi - craig@apple.com
 #
@@ -24,3 +36,13 @@
 #
 # Tesla, Inc.
 # Elon Musk - elon@tesla.com
+
+companies = Company.all
+for company in companies
+    puts "#{company.name}"
+    contacts = company.contacts
+        for contact in contacts
+            puts "#{contact.first_name} #{contact.last_name} - #{contact.email} - #{contact.company.name}"
+        end
+     puts ""
+end
