@@ -25,7 +25,31 @@ values = {
         company = Company.new(values)
         company.save
 
+ puts "There are #{Company.all.count} companies"
+
+ values = {
+            name: "Amazon", 
+            url: "Amazon.com", 
+            city: "Seattle", 
+            state: "QA"
+        }
+        company = Company.new(values)
+        company.save
+
+puts "There are #{Company.all.count} companies"
+
+company = Company.new
+company.write_attribute(:name, "Tesla")
+company.write_attribute(:url, "https://tesla.com")
+company.write_attribute(:city, "Palo Alto")
+company.write_attribute(:state, "CA")
+company.save
+
+puts "There are #{Company.all.count} companies"
+
 # 3. query companies table
+
+
 
 # 4. read column values from row
 
